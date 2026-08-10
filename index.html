@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clube da Bola | Jaú-SP</title>
+
+    <meta name="description" content="Clube da Bola - Futebol, escolinha, quadras, eventos e Sport Bar em Jaú-SP.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        header {
+            background: #111;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #19d34a;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #19d34a;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 7%;
+            background:
+                linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.8)),
+                linear-gradient(135deg, #123d20, #071008);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: .95;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #19d34a;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-green {
+            background: #19d34a;
+            color: #000;
+        }
+
+        .btn-dark {
+            border: 1px solid #555;
+            color: white;
+        }
+
+        section {
+            padding: 70px 7%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #aaa;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #161616;
+            border: 1px solid #292929;
+            border-radius: 15px;
+            padding: 30px;
+            transition: .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #19d34a;
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .school {
+            background: #101010;
+        }
+
+        .school-box {
+            max-width: 900px;
+            margin: auto;
+            background: linear-gradient(135deg, #123d20, #111);
+            border-radius: 20px;
+            padding: 45px;
+        }
+
+        .school-box h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .school-box p {
+            color: #ddd;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #19d34a;
+            color: #000;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .whatsapp {
+            background: #000;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #080808;
+            color: #777;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .school-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CLUBE DA <span>BOLA</span></div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#escolinha">Escolinha</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+
+        <h1>
+            O futebol<br>
+            <span>começa aqui.</span>
+        </h1>
+
+        <p>
+            Clube da Bola — futebol, diversão e experiências
+            para toda a família em Jaú-SP.
+        </p>
+
+        <div class="buttons">
+            <a class="btn btn-green"
+               href="https://wa.me/5514999999999"
+               target="_blank">
+                📲 Falar no WhatsApp
+            </a>
+
+            <a class="btn btn-dark" href="#servicos">
+                Conheça o Clube
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="servicos">
+
+    <div class="title">
+        <h2>O que temos</h2>
+        <p>Tudo para você aproveitar o futebol.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">⚽</div>
+            <h3>Aluguel de Quadras</h3>
+            <p>
+                Reserve nossas quadras para jogar futebol
+                com seus amigos e sua equipe.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👟</div>
+            <h3>Escola de Futebol</h3>
+            <p>
+                Treinamentos para crianças e adolescentes
+                na Escola de Futebol Garotos da Bola.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Campeonatos</h3>
+            <p>
+                Torneios, campeonatos e competições
+                para equipes de diferentes categorias.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎉</div>
+            <h3>Eventos</h3>
+            <p>
+                Aniversários, confraternizações e eventos
+                para você comemorar com sua turma.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🍖</div>
+            <h3>Sport Bar</h3>
+            <p>
+                Assista aos jogos, aproveite nossas porções,
+                espetinhos e bebidas.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔥</div>
+            <h3>Churrasqueiras</h3>
+            <p>
+                Espaço para reunir a família e os amigos
+                depois daquele futebol.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="school" id="escolinha">
+
+    <div class="school-box">
+
+        <h2>⚽ Garotos da Bola</h2>
+
+        <p>
+            Nossa escola de futebol trabalha o desenvolvimento
+            esportivo das crianças e adolescentes, unindo
+            futebol, disciplina, amizade e diversão.
+        </p>
+
+        <a class="btn btn-green"
+           href="https://wa.me/5514999999999"
+           target="_blank">
+            Quero conhecer a escolinha
+        </a>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contato">
+
+    <h2>Vamos jogar?</h2>
+
+    <p>
+        Entre em contato com o Clube da Bola.
+    </p>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/5514999999999"
+       target="_blank">
+        📲 Chamar no WhatsApp
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Clube da Bola — Jaú/SP
+</footer>
+
+</body>
+</html>
