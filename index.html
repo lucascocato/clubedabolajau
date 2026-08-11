@@ -4,139 +4,201 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clube da Bola | Jaú-SP</title>
-<meta name="description" content="Clube da Bola em Jaú-SP: futebol society, aluguel de quadras, Escola de Futebol Garotos da Bola, aniversários e Sport Bar.">
+<meta name="description" content="Clube da Bola - futebol, escolinha, aluguel de quadras e aniversários em Jaú-SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{
-  --red:#ef2b32;
-  --red-dark:#b9141b;
-  --black:#080808;
-  --dark:#111;
-  --gray:#1b1b1b;
+  --red:#ef233c;
+  --red-dark:#c9162d;
+  --black:#08090b;
+  --dark:#101216;
   --white:#fff;
-  --muted:#bdbdbd;
-  --green:#25d366;
+  --gray:#aeb4bd;
+  --card:#17191e;
+  --line:rgba(255,255,255,.1);
 }
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.55}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Montserrat,Arial,sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.6;
+}
 a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
 .container{width:min(1180px,92%);margin:auto}
+.topbar{
+  background:#050506;border-bottom:1px solid var(--line);
+  font-size:12px;color:#cfd3d8;padding:8px 0;
+}
+.topbar .container{display:flex;justify-content:space-between;gap:15px}
 header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(8,8,8,.94);backdrop-filter:blur(10px);
-  border-bottom:1px solid #292929;
+  position:sticky;top:0;z-index:20;
+  background:rgba(8,9,11,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
 }
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{height:55px;width:auto;object-fit:contain}
-nav{display:flex;gap:24px;align-items:center}
-nav a{font-weight:700;font-size:15px;color:#fff}
-nav a:hover{color:var(--red)}
-.menu-btn{display:none;background:none;border:0;color:#fff;font-size:28px}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Barlow Condensed";font-size:34px;font-weight:900;letter-spacing:.5px}
+.brand span{color:var(--red)}
+.navlinks{display:flex;gap:26px;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--red)}
+.navcta{
+  background:var(--red);padding:12px 18px;border-radius:8px;font-weight:800;
+}
+.navcta:hover{background:var(--red-dark)}
 .hero{
-  min-height:650px;display:flex;align-items:center;
+  min-height:700px;display:flex;align-items:center;position:relative;overflow:hidden;
   background:
-    linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.72) 48%,rgba(0,0,0,.35) 100%),
-    url("IMG_8588.JPEG") center/cover no-repeat;
+    linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.76) 45%,rgba(0,0,0,.35) 100%),
+    radial-gradient(circle at 80% 50%,rgba(239,35,60,.24),transparent 35%),
+    linear-gradient(135deg,#111 0%,#050505 65%);
 }
-.hero-content{padding:90px 0;max-width:720px}
-.tag{display:inline-block;background:var(--red);padding:7px 12px;border-radius:4px;font-weight:800;font-size:13px;letter-spacing:.5px;margin-bottom:18px}
-h1{font-size:clamp(42px,7vw,76px);line-height:.98;text-transform:uppercase;margin-bottom:20px}
+.hero:after{
+  content:"";position:absolute;right:-12%;bottom:-35%;width:650px;height:650px;
+  border:80px solid rgba(239,35,60,.08);border-radius:50%;
+}
+.hero-content{position:relative;z-index:2;max-width:760px;padding:90px 0}
+.kicker{color:var(--red);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+h1{
+  font-family:"Barlow Condensed";font-size:clamp(64px,9vw,120px);
+  line-height:.86;text-transform:uppercase;margin:18px 0 25px;font-weight:900;
+}
 h1 span{color:var(--red)}
-.hero p{font-size:20px;color:#ddd;max-width:650px;margin-bottom:30px}
-.buttons{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 22px;border-radius:7px;font-weight:800;border:1px solid #555;transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-red{background:var(--red);border-color:var(--red)}
-.btn-dark{background:#111}
-.btn-green{background:var(--green);color:#06150a;border-color:var(--green)}
-section{padding:85px 0}
-.section-head{margin-bottom:35px}
-.kicker{color:var(--red);font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:1.5px}
-h2{font-size:clamp(30px,4vw,48px);line-height:1.05;margin:7px 0 10px;text-transform:uppercase}
-.subtitle{color:var(--muted);max-width:700px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--dark);border:1px solid #2b2b2b;border-radius:14px;padding:25px}
-.card h3{font-size:22px;margin-bottom:9px}
-.card p{color:#c8c8c8}
-.card .icon{font-size:34px;margin-bottom:10px}
-.red-card{border-color:#5a2023}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.photo{border-radius:16px;overflow:hidden;border:1px solid #333}
-.photo img{width:100%;height:100%;object-fit:cover}
-.photo.tall img{min-height:470px}
-.schedule{display:grid;gap:14px}
-.schedule-group{background:var(--dark);border:1px solid #2a2a2a;border-radius:12px;padding:20px}
-.schedule-title{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:14px}
-.schedule-title h3{font-size:22px}
-.badge{background:#2b2b2b;color:#fff;padding:5px 9px;border-radius:20px;font-size:12px;font-weight:800}
-.item{padding:13px 0;border-top:1px solid #292929}
-.item:first-child{border-top:0}
-.item strong{display:block;font-size:17px}
-.item span{color:#bdbdbd}
-.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:25px}
-.price{background:#121212;border:1px solid #333;border-radius:12px;padding:24px}
-.price strong{font-size:30px;color:var(--red);display:block}
-.price small{color:#aaa}
-.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:15px}
-.gallery .g{height:290px;border-radius:14px;overflow:hidden;border:1px solid #333}
-.gallery .g:first-child{height:595px;grid-row:span 2}
-.gallery img{width:100%;height:100%;object-fit:cover}
-.hours{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.hours .card{padding:20px}
-.hours strong{display:block;font-size:18px;margin-bottom:4px}
-.contact-box{background:linear-gradient(135deg,#171717,#0d0d0d);border:1px solid #333;border-radius:18px;padding:35px}
-.contact-list{display:grid;gap:13px;color:#ddd;margin:20px 0}
-footer{border-top:1px solid #292929;background:#050505;padding:35px 0;color:#999}
-.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
-.footer-logo{height:42px}
-.center{text-align:center}
-@media(max-width:850px){
-  nav{display:none}
-  .menu-btn{display:block}
-  .nav{min-height:70px}
-  .logo{height:46px}
-  .hero{min-height:610px}
-  .grid,.split,.prices,.hours{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr}
-  .gallery .g:first-child{height:360px;grid-column:1/-1;grid-row:auto}
-  .gallery .g{height:230px}
+.hero p{font-size:18px;color:#d6d9de;max-width:650px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:15px 22px;border-radius:9px;font-weight:800;font-size:14px;
+  border:1px solid var(--line);transition:.2s;
 }
-@media(max-width:560px){
-  section{padding:65px 0}
-  .hero-content{padding:70px 0}
-  .hero p{font-size:17px}
-  .buttons .btn{width:100%}
+.btn-red{background:var(--red);border-color:var(--red)}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-dark{background:#15171b}
+.btn-dark:hover{border-color:var(--red);transform:translateY(-2px)}
+section{padding:95px 0}
+.section-head{margin-bottom:38px}
+.eyebrow{color:var(--red);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{
+  font-family:"Barlow Condensed";font-size:clamp(44px,6vw,72px);
+  line-height:.95;text-transform:uppercase;margin-top:8px;
+}
+.lead{color:var(--gray);max-width:700px;margin-top:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:linear-gradient(145deg,#191b20,#101114);
+  border:1px solid var(--line);border-radius:16px;padding:28px;
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(239,35,60,.45)}
+.icon{font-size:30px;margin-bottom:15px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--gray);font-size:14px}
+.card .mini{display:inline-block;margin-top:18px;color:var(--red);font-size:13px;font-weight:800}
+.booking{
+  background:linear-gradient(100deg,#ef233c,#bd142a);
+  padding:48px;border-radius:20px;display:flex;justify-content:space-between;
+  align-items:center;gap:25px;
+}
+.booking h3{font-family:"Barlow Condensed";font-size:48px;text-transform:uppercase;line-height:.9}
+.booking p{margin-top:8px;opacity:.9}
+.booking .btn{background:#fff;color:#111;border:0}
+.dark-section{background:#0d0f12}
+.schedule{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.schedule-card{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden
+}
+.schedule-title{background:#1d2026;padding:17px 22px;font-weight:800}
+.schedule-title span{color:var(--red)}
+.schedule-row{
+  display:flex;justify-content:space-between;gap:20px;padding:16px 22px;
+  border-top:1px solid var(--line);font-size:14px
+}
+.schedule-row b{font-weight:700}.schedule-row small{color:var(--gray)}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.price{
+  background:var(--card);padding:26px;border-radius:16px;border:1px solid var(--line)
+}
+.price strong{display:block;font-family:"Barlow Condensed";font-size:40px;color:var(--red)}
+.price p{color:var(--gray);font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.gallery figure{overflow:hidden;border-radius:14px;border:1px solid var(--line);background:#111}
+.gallery img{width:100%;height:100%;min-height:230px;object-fit:cover;display:block;transition:.35s}
+.gallery figure:hover img{transform:scale(1.04)}
+.g1{grid-column:span 7}.g2{grid-column:span 5}.g3{grid-column:span 5}.g4{grid-column:span 7}
+.gallery figcaption{padding:10px 14px;font-size:12px;color:#bbb}
+.party{
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch
+}
+.party-copy{background:linear-gradient(145deg,#1b1d22,#101114);border:1px solid var(--line);border-radius:18px;padding:35px}
+.party-copy ul{list-style:none;margin-top:22px}
+.party-copy li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.party-copy li:last-child{border-bottom:0}
+.party-price{font-family:"Barlow Condensed";font-size:64px;color:var(--red);line-height:1;margin-top:22px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.info{background:#121419;border:1px solid var(--line);border-radius:15px;padding:25px}
+.info strong{display:block;margin-bottom:8px}.info span{color:var(--gray);font-size:14px}
+.instagram{
+  margin-top:28px;background:#121419;border:1px solid var(--line);border-radius:16px;
+  padding:28px;display:flex;justify-content:space-between;align-items:center;gap:20px
+}
+footer{background:#050506;border-top:1px solid var(--line);padding:40px 0;color:#9da3ab;font-size:13px}
+.footer-row{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){
+  .navlinks{display:none}
+  .topbar .container{justify-content:center}.topbar .container span:first-child{display:none}
+  .hero{min-height:650px}.hero-content{padding:70px 0}
+  .cards,.schedule,.prices,.party,.info-grid{grid-template-columns:1fr}
+  .booking{padding:30px;display:block}.booking .btn{margin-top:20px}
+  .gallery{grid-template-columns:1fr 1fr}.g1,.g2,.g3,.g4{grid-column:span 1}
+  .gallery img{min-height:180px}
+  .footer-row{display:block}.footer-row div+div{margin-top:12px}
+}
+@media(max-width:520px){
+  .nav{height:68px}.brand{font-size:29px}
+  .navcta{padding:10px 12px;font-size:12px}
+  section{padding:70px 0}
+  h1{font-size:65px}
+  .hero p{font-size:15px}
   .gallery{grid-template-columns:1fr}
-  .gallery .g,.gallery .g:first-child{height:270px;grid-column:auto}
-  .footer-row{flex-direction:column;text-align:center}
+  .gallery img{min-height:220px}
 }
 </style>
 </head>
+
 <body>
+<div class="topbar">
+  <div class="container">
+    <span>CLUBE DA BOLA • JAÚ/SP</span>
+    <span>Seg–Sex 16h–23h30 • Sáb 8h–12h / 14h–20h30 • Dom 8h–12h</span>
+  </div>
+</div>
 
 <header>
   <div class="container nav">
-    <a href="#inicio"><img class="logo" src="IMG_8371.PNG" alt="Clube da Bola Futebol Society"></a>
-    <nav>
+    <a class="brand" href="#inicio">CLUBE DA <span>BOLA</span></a>
+    <nav class="navlinks">
       <a href="#quadras">Quadras</a>
-      <a href="#escola">Escola</a>
+      <a href="#escolinha">Escolinha</a>
       <a href="#aniversario">Aniversários</a>
-      <a href="#espaco">Espaço</a>
+      <a href="#galeria">Fotos</a>
       <a href="#contato">Contato</a>
     </nav>
-    <button class="menu-btn" onclick="alert('Use os botões da página para acessar cada seção.')">☰</button>
+    <a class="navcta" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau">ALUGAR QUADRA</a>
   </div>
 </header>
 
 <main>
-<section id="inicio" class="hero">
+<section class="hero" id="inicio">
   <div class="container hero-content">
-    <div class="tag">CLUBE DA BOLA • JAÚ/SP</div>
-    <h1>O futebol<br><span>começa aqui.</span></h1>
-    <p>Quadras society, escola de futebol, aniversários e um espaço completo para você viver o futebol.</p>
-    <div class="buttons">
-      <a class="btn btn-red" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank">⚽ ALUGAR QUADRA</a>
-      <a class="btn btn-green" href="https://wa.me/5514996695565?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Clube%20da%20Bola." target="_blank">💬 FALAR NO WHATSAPP</a>
+    <div class="kicker">Futebol • Família • Experiências</div>
+    <h1>O jogo<br>começa <span>aqui.</span></h1>
+    <p>Um espaço completo para jogar futebol, desenvolver talentos, comemorar momentos especiais e viver o esporte em Jaú.</p>
+    <div class="actions">
+      <a class="btn btn-red" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau">⚽ ALUGAR SUA QUADRA</a>
+      <a class="btn btn-dark" href="https://wa.me/5514996695565">💬 FALAR NO WHATSAPP</a>
     </div>
   </div>
 </section>
@@ -144,148 +206,128 @@ footer{border-top:1px solid #292929;background:#050505;padding:35px 0;color:#999
 <section id="quadras">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Aluguel de quadras</div>
-      <h2>Jogue quando quiser.</h2>
-      <p class="subtitle">Escolha o melhor horário e faça sua reserva online. O botão abaixo leva direto para a agenda do Clube da Bola.</p>
+      <div class="eyebrow">Seu próximo jogo</div>
+      <h2>Alugue sua quadra</h2>
+      <p class="lead">Escolha o melhor horário e faça sua reserva online. É rápido, simples e direto.</p>
     </div>
-    <div class="grid">
-      <div class="card red-card"><div class="icon">⚽</div><h3>Futebol Society</h3><p>Estrutura para seus jogos, treinos e partidas com amigos.</p></div>
-      <div class="card"><div class="icon">📅</div><h3>Agendamento online</h3><p>Consulte os horários disponíveis e reserve sua quadra pela agenda.</p></div>
-      <div class="card"><div class="icon">🏆</div><h3>Para times e grupos</h3><p>Espaço ideal para peladas, treinos, amistosos e competições.</p></div>
+    <div class="booking">
+      <div><h3>Partiu jogo?</h3><p>Confira os horários disponíveis e reserve sua quadra.</p></div>
+      <a class="btn" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau">VER DISPONIBILIDADE →</a>
     </div>
-    <div class="center" style="margin-top:28px">
-      <a class="btn btn-red" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank">VER HORÁRIOS E AGENDAR →</a>
+    <div class="cards" style="margin-top:20px">
+      <article class="card"><div class="icon">⚽</div><h3>Futebol Society</h3><p>Estrutura para você reunir a galera e jogar com conforto.</p></article>
+      <article class="card"><div class="icon">🍖</div><h3>Churrasqueiras</h3><p>Depois do jogo, aproveite o espaço para confraternizar.</p></article>
+      <article class="card"><div class="icon">📺</div><h3>Sport Bar</h3><p>Futebol, porções, espetinhos e aquele clima de resenha.</p></article>
     </div>
   </div>
 </section>
 
-<section id="escola" style="background:#0e0e0e">
+<section class="dark-section" id="escolinha">
   <div class="container">
-    <div class="split">
-      <div>
-        <img src="IMG_8375.PNG" alt="Escola de Futebol Garotos da Bola" style="max-width:520px;width:100%;margin-bottom:28px">
-        <div class="kicker">Escola de Futebol</div>
-        <h2>Garotos da Bola</h2>
-        <p class="subtitle">Treinos por faixa etária, com opções à tarde, à noite e aos sábados.</p>
-        <div class="buttons" style="margin-top:25px">
-          <a class="btn btn-red" href="https://wa.me/5514996695565?text=Ol%C3%A1!%20Quero%20verificar%20a%20disponibilidade%20de%20vaga%20na%20Escola%20Garotos%20da%20Bola." target="_blank">🔎 VERIFICAR DISPONIBILIDADE DE VAGA</a>
-        </div>
-      </div>
+    <div class="section-head">
+      <div class="eyebrow">Garotos da Bola</div>
+      <h2>Escolinha de futebol</h2>
+      <p class="lead">Treinos por faixa etária, com desenvolvimento esportivo e muita diversão.</p>
+    </div>
 
-      <div class="schedule">
-        <div class="schedule-group">
-          <div class="schedule-title"><h3>🌇 Tarde</h3><span class="badge">2x por semana</span></div>
-          <div class="item"><strong>8 a 11 anos</strong><span>Segunda e Quarta • 17h às 18h</span></div>
-          <div class="item"><strong>12 a 15 anos</strong><span>Terça e Quinta • 17h às 18h</span></div>
-        </div>
-        <div class="schedule-group">
-          <div class="schedule-title"><h3>🌙 Noite</h3><span class="badge">1x por semana</span></div>
-          <div class="item"><strong>5 a 7 anos</strong><span>Terça • 18h às 19h</span></div>
-          <div class="item"><strong>8 a 10 anos</strong><span>Quarta • 18h às 19h</span></div>
-          <div class="item"><strong>11 a 12 anos</strong><span>Quinta • 18h às 19h</span></div>
-        </div>
-        <div class="schedule-group">
-          <div class="schedule-title"><h3>☀️ Sábado</h3><span class="badge">1x por semana</span></div>
-          <div class="item"><strong>10 a 13 anos</strong><span>08h às 09h</span></div>
-          <div class="item"><strong>5 a 9 anos</strong><span>09h às 10h</span></div>
-        </div>
+    <div class="schedule">
+      <div class="schedule-card">
+        <div class="schedule-title">🌇 <span>TARDE</span> • 2x por semana</div>
+        <div class="schedule-row"><b>8 a 11 anos</b><small>Segunda e Quarta • 17h às 18h</small></div>
+        <div class="schedule-row"><b>12 a 15 anos</b><small>Terça e Quinta • 17h às 18h</small></div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-title">🌙 <span>NOITE</span> • 1x por semana</div>
+        <div class="schedule-row"><b>5 a 7 anos</b><small>Terça • 18h às 19h</small></div>
+        <div class="schedule-row"><b>8 a 10 anos</b><small>Quarta • 18h às 19h</small></div>
+        <div class="schedule-row"><b>11 a 12 anos</b><small>Quinta • 18h às 19h</small></div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-title">☀️ <span>SÁBADO</span> • 1x por semana</div>
+        <div class="schedule-row"><b>10 a 13 anos</b><small>08h às 09h</small></div>
+        <div class="schedule-row"><b>5 a 9 anos</b><small>09h às 10h</small></div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-title">📋 <span>VAGAS</span></div>
+        <div class="schedule-row"><b>Quer entrar?</b><small>Consulte disponibilidade</small></div>
+        <div style="padding:20px 22px"><a class="btn btn-red" href="https://wa.me/5514996695565">VERIFICAR VAGA →</a></div>
       </div>
     </div>
 
-    <div style="margin-top:55px">
-      <div class="section-head">
-        <div class="kicker">Valores 2026</div>
-        <h2>Planos da escolinha</h2>
-      </div>
-      <div class="prices">
-        <div class="price"><small>1x por semana</small><strong>R$ 72</strong><span>por mês</span></div>
-        <div class="price"><small>2x por semana</small><strong>R$ 105</strong><span>por mês</span></div>
-        <div class="price"><small>Uniforme + matrícula à vista</small><strong>R$ 150</strong><span>Inclui camisa, shorts e meião.</span></div>
-        <div class="price"><small>Uniforme + matrícula no cartão</small><strong>R$ 160</strong><span>Parcelado em até 3x. Inclui camisa, shorts e meião.</span></div>
-      </div>
+    <div class="prices">
+      <div class="price"><div>👕 Uniforme + matrícula</div><strong>R$ 150</strong><p>À vista. Inclui camisa, shorts e meião.</p><p style="margin-top:8px">R$ 160 parcelado em até 3x no cartão.</p></div>
+      <div class="price"><div>📅 Planos mensais</div><strong>R$ 72 / R$ 105</strong><p>1x por semana: R$72/mês • 2x por semana: R$105/mês.</p></div>
     </div>
   </div>
 </section>
 
 <section id="aniversario">
   <div class="container">
-    <div class="split">
-      <div class="photo tall"><img src="IMG_9400.JPEG" alt="Espaço para aniversários no Clube da Bola"></div>
-      <div>
-        <div class="kicker">🎉 Aniversários</div>
-        <h2>Seu aniversário com o Clube exclusivo para vocês.</h2>
-        <p class="subtitle">Alugamos aos domingos à tarde, com comodidade, privacidade e espaço para curtir com a família e os amigos.</p>
-        <div class="card" style="margin-top:25px">
-          <p>✔️ Mesas, cadeiras, freezer, micro-ondas e bebedouro incluídos.</p>
-          <p>⏰ Duração: <strong>4 horas</strong> — horário a combinar.</p>
-          <p>💰 Valor: <strong>R$ 650</strong> — reserva com R$ 100 antecipado.</p>
-          <p>👧👦 Parquinho opcional: <strong>+ R$ 100</strong>.</p>
-        </div>
-        <div class="buttons" style="margin-top:22px">
-          <a class="btn btn-red" href="https://wa.me/5514996695565?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20anivers%C3%A1rio%20no%20Clube%20da%20Bola." target="_blank">🎉 QUERO FAZER MEU ANIVERSÁRIO</a>
-        </div>
+    <div class="section-head">
+      <div class="eyebrow">Seu dia. Do seu jeito.</div>
+      <h2>Aniversário no Clube</h2>
+      <p class="lead">Um espaço exclusivo para comemorar com família e amigos, com futebol e diversão.</p>
+    </div>
+    <div class="party">
+      <div class="party-copy">
+        <h3>🎉 Futebol + festa</h3>
+        <ul>
+          <li>✔️ Aos domingos à tarde</li>
+          <li>✔️ Clube exclusivo para vocês</li>
+          <li>✔️ Mesas e cadeiras</li>
+          <li>✔️ Freezer, micro-ondas e bebedouro</li>
+          <li>✔️ 4 horas de duração</li>
+          <li>✔️ Horário a combinar</li>
+          <li>✔️ Parquinho opcional: +R$100</li>
+        </ul>
+        <div class="party-price">R$650</div>
+        <p>Reserva com R$100 antecipado.</p>
+        <div class="actions"><a class="btn btn-red" href="https://wa.me/5514996695565">QUERO FAZER MEU ANIVERSÁRIO</a></div>
+      </div>
+      <div class="card" style="padding:0;overflow:hidden">
+        <img src="aniversario.jpg" alt="Aniversário no Clube da Bola" style="width:100%;height:100%;min-height:420px;object-fit:cover;display:block">
       </div>
     </div>
   </div>
 </section>
 
-<section id="espaco" style="background:#0e0e0e">
+<section class="dark-section" id="galeria">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Conheça o espaço</div>
-      <h2>Clube da Bola por dentro.</h2>
-      <p class="subtitle">Um espaço para jogar, comemorar e aproveitar com a família e os amigos.</p>
+      <div class="eyebrow">Viva a experiência</div>
+      <h2>Conheça o Clube</h2>
+      <p class="lead">Um pouco do que acontece por aqui. Venha conhecer de perto.</p>
     </div>
     <div class="gallery">
-      <div class="g"><img src="IMG_8588.JPEG" alt="Quadras do Clube da Bola à noite"></div>
-      <div class="g"><img src="IMG_9399.JPEG" alt="Área de convivência do Clube da Bola"></div>
-      <div class="g"><img src="IMG_9400.JPEG" alt="Espaço de churrasqueiras do Clube da Bola"></div>
+      <figure class="g1"><img src="aniversario.jpg" alt="Decoração de aniversário"></figure>
+      <figure class="g2"><img src="IMG_9403.jpg" alt="Espaço do Clube da Bola"></figure>
+      <figure class="g3"><img src="IMG_9399.JPEG" alt="Clube da Bola"></figure>
+      <figure class="g4"><img src="IMG_9400.JPEG" alt="Clube da Bola"></figure>
+      <figure class="g2"><img src="IMG_8588.JPEG" alt="Clube da Bola"></figure>
+      <figure class="g3"><img src="IMG_8371.PNG" alt="Escolinha Garotos da Bola"></figure>
+      <figure class="g4"><img src="IMG_8375.PNG" alt="Escolinha Garotos da Bola"></figure>
     </div>
-    <div class="grid" style="margin-top:30px">
-      <div class="card"><div class="icon">🍖</div><h3>Churrasqueiras</h3><p>Espaço para confraternizações e momentos especiais.</p></div>
-      <div class="card"><div class="icon">📺</div><h3>Sport Bar</h3><p>Ambiente para acompanhar jogos e curtir depois da partida.</p></div>
-      <div class="card"><div class="icon">👨‍👩‍👧‍👦</div><h3>Família e diversão</h3><p>Um espaço pensado para futebol, lazer e convivência.</p></div>
+    <div class="instagram">
+      <div><strong>Quer ver ainda mais?</strong><br><span style="color:#aeb4bd">Nosso Instagram é a vitrine do Clube.</span></div>
+      <a class="btn btn-red" href="https://www.instagram.com/clubedabolajau/">📸 CONHEÇA NOSSO INSTAGRAM</a>
     </div>
   </div>
 </section>
 
-<section>
+<section id="contato">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Funcionamento</div>
-      <h2>Horários do Clube</h2>
+      <div class="eyebrow">Onde estamos</div>
+      <h2>Venha para o Clube</h2>
     </div>
-    <div class="hours">
-      <div class="card"><strong>Segunda a sexta</strong><span>16h às 23h30</span></div>
-      <div class="card"><strong>Sábado</strong><span>08h às 12h • 14h às 20h30</span></div>
-      <div class="card"><strong>Domingo</strong><span>08h às 12h</span></div>
+    <div class="info-grid">
+      <div class="info"><strong>📍 Endereço</strong><span>Av. Dudu Ferraz, 1200<br>Jardim Novo Horizonte<br>Jaú-SP</span></div>
+      <div class="info"><strong>🕐 Funcionamento</strong><span>Seg–Sex: 16h às 23h30<br>Sáb: 8h–12h / 14h–20h30<br>Dom: 8h às 12h</span></div>
+      <div class="info"><strong>📲 Atendimento</strong><span>WhatsApp: (14) 99669-5565<br>Fale conosco para reservas e informações.</span></div>
     </div>
-  </div>
-</section>
-
-<section id="contato" style="background:#0e0e0e">
-  <div class="container">
-    <div class="contact-box">
-      <div class="split">
-        <div>
-          <div class="kicker">Fale com a gente</div>
-          <h2>Venha conhecer o Clube da Bola.</h2>
-          <div class="contact-list">
-            <div>📍 Av. Dudu Ferraz, 1200 — Jardim Novo Horizonte, Jaú/SP</div>
-            <div>📱 (14) 99669-5565</div>
-            <div>📸 Instagram: @clubedabolajau</div>
-          </div>
-          <div class="buttons">
-            <a class="btn btn-green" href="https://wa.me/5514996695565" target="_blank">WHATSAPP</a>
-            <a class="btn btn-red" href="https://www.instagram.com/clubedabolajau/" target="_blank">CONHEÇA NOSSO INSTAGRAM</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>📅 Quer jogar?</h3>
-          <p style="margin-bottom:18px">Confira os horários disponíveis e reserve sua quadra online.</p>
-          <a class="btn btn-red" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank">ALUGAR QUADRA →</a>
-        </div>
-      </div>
+    <div class="actions" style="margin-top:25px">
+      <a class="btn btn-red" href="https://wa.me/5514996695565">FALAR NO WHATSAPP</a>
+      <a class="btn btn-dark" href="https://www.instagram.com/clubedabolajau/">VER INSTAGRAM</a>
     </div>
   </div>
 </section>
@@ -293,9 +335,8 @@ footer{border-top:1px solid #292929;background:#050505;padding:35px 0;color:#999
 
 <footer>
   <div class="container footer-row">
-    <img class="footer-logo" src="IMG_8371.PNG" alt="Clube da Bola">
-    <div>© 2026 Clube da Bola — Jaú/SP</div>
-    <a href="https://www.instagram.com/clubedabolajau/" target="_blank">Instagram</a>
+    <div>© 2026 Clube da Bola • Jaú-SP</div>
+    <div>Futebol • Escolinha • Aniversários • Sport Bar</div>
   </div>
 </footer>
 </body>
