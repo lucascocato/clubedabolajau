@@ -165,6 +165,17 @@ footer{background:#050506;border-top:1px solid var(--line);padding:40px 0;color:
   .gallery{grid-template-columns:1fr}
   .gallery img{min-height:220px}
 }
+
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.video-card{background:#121419;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.video-frame{position:relative;width:100%;aspect-ratio:9/16;background:#050506}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-info{padding:20px}
+.video-info h3{font-family:"Barlow Condensed";font-size:28px;text-transform:uppercase}
+.video-info p{color:var(--gray);font-size:13px;margin-top:4px}
+@media(max-width:850px){.video-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.video-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 
@@ -183,6 +194,7 @@ footer{background:#050506;border-top:1px solid var(--line);padding:40px 0;color:
       <a href="#quadras">Quadras</a>
       <a href="#escolinha">Escolinha</a>
       <a href="#aniversario">Aniversários</a>
+      <a href="#videos">Vídeos</a>
       <a href="#galeria">Fotos</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -287,6 +299,53 @@ footer{background:#050506;border-top:1px solid var(--line);padding:40px 0;color:
       <div class="card" style="padding:0;overflow:hidden">
         <img src="aniversario.jpg" alt="Aniversário no Clube da Bola" style="width:100%;height:100%;min-height:420px;object-fit:cover;display:block">
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="dark-section" id="videos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Clube em movimento</div>
+      <h2>Veja o Clube em ação</h2>
+      <p class="lead">Treinos, momentos e a energia da nossa escolinha. Dê o play e conheça um pouco mais do Clube da Bola.</p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/0s967k8W5TA"
+            title="Clube da Bola - vídeo da escolinha"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Escolinha em ação</h3>
+          <p>Confira um pouco da energia dos nossos treinos.</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/osQjVGG9sfk"
+            title="Clube da Bola - vídeo da escolinha"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Momentos da escolinha</h3>
+          <p>Mais futebol, diversão e desenvolvimento.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="actions" style="justify-content:center;margin-top:28px">
+      <a class="btn btn-red" href="https://www.youtube.com/@clubedabolajau" target="_blank" rel="noopener">▶ VER MAIS VÍDEOS</a>
     </div>
   </div>
 </section>
