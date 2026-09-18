@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Locação de quadras | Clube da Bola Jaú</title>
+
+<meta name="description" content="Reserve sua quadra de futebol society no Clube da Bola Jaú.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPO
+========================= -->
+
+<div class="topbar">
+
+  <div class="container">
+
+    <span>CLUBE DA BOLA • JAÚ/SP</span>
+
+    <span>
+      Seg–Sex 16h–23h30 •
+      Sáb 8h–12h / 14h–20h30 •
+      Dom 8h–12h
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a class="brand" href="index.html">
+      CLUBE DA <span>BOLA</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Navegação principal">
+      <a href="locacao.html" aria-current="page">Locação</a>
+      <a href="clube.html">Conheça o Clube</a>
+      <a href="replays.html">Seu lance no celular</a>
+      <a href="aniversario.html">Aniversários</a>
+      <a href="escolinha.html">Escolinha</a>
+    </nav>
+
+    <a
+      class="navcta"
+      href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank" rel="noopener noreferrer"
+    >
+      ALUGAR QUADRA
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<main>
+<section class="page-hero"><div class="container"><div class="eyebrow">Seu próximo jogo</div><h1>A quadra é sua.</h1><p>Reúna a galera, escolha um horário e venha jogar no Clube da Bola.</p><a class="btn btn-red" href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank" rel="noopener noreferrer">RESERVAR QUADRA →</a></div></section>
+<section id="quadras">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Seu próximo jogo
+      </div>
+
+      <h2>
+        Alugue sua quadra
+      </h2>
+
+      <p class="lead">
+        Escolha o melhor horário e faça sua reserva online.
+        É rápido, simples e direto.
+      </p>
+
+    </div>
+
+
+    <div class="booking">
+
+      <div>
+
+        <h3>
+          Partiu jogo?
+        </h3>
+
+        <p>
+          Confira os horários disponíveis e reserve sua quadra.
+        </p>
+
+      </div>
+
+      <a
+        class="btn"
+        href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank" rel="noopener noreferrer"
+      >
+        VER DISPONIBILIDADE →
+      </a>
+
+    </div>
+
+
+    <div
+      class="cards"
+      style="margin-top:20px"
+    >
+
+      <article class="card">
+
+        <div class="icon">
+          ⚽
+        </div>
+
+        <h3>
+          Futebol Society
+        </h3>
+
+        <p>
+          Estrutura para você reunir a galera
+          e jogar com conforto.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="icon">
+          🍖
+        </div>
+
+        <h3>
+          Churrasqueiras
+        </h3>
+
+        <p>
+          Depois do jogo, aproveite o espaço
+          para confraternizar.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="icon">
+          📺
+        </div>
+
+        <h3>
+          Sport Bar
+        </h3>
+
+        <p>
+          Futebol, porções, espetinhos
+          e aquele clima de resenha.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="segment-contact"><div class="container"><div><h2>Quer falar com a gente?</h2><p>Estamos em Jaú e podemos ajudar você a escolher a melhor experiência.</p></div><a class="btn btn-red" href="https://wa.me/5514996695565" target="_blank" rel="noopener noreferrer">FALAR NO WHATSAPP →</a></div></section>
+</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+  <div class="container footer-row">
+
+    <div>
+      © 2026 Clube da Bola • Jaú-SP
+    </div>
+
+    <div>
+      Futebol • Escolinha • Aniversários • Sport Bar
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+  document.querySelectorAll('[data-replay-code]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const code = button.getAttribute('data-replay-code');
+      const status = document.getElementById('replay-copy-status');
+      try {
+        await navigator.clipboard.writeText(code);
+        status.textContent = `Código ${code} copiado. Cole no aplicativo Replay Sports.`;
+        button.textContent = 'Copiado ✓';
+        window.setTimeout(() => { button.textContent = 'Copiar código'; }, 2500);
+      } catch {
+        status.textContent = `Não foi possível copiar automaticamente. Digite ${code} no aplicativo Replay Sports.`;
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

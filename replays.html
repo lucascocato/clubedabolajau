@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Seu lance no celular | Clube da Bola Jaú</title>
+
+<meta name="description" content="Veja como assistir aos seus gols e jogadas pelo aplicativo Replay Sports no Clube da Bola Jaú.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPO
+========================= -->
+
+<div class="topbar">
+
+  <div class="container">
+
+    <span>CLUBE DA BOLA • JAÚ/SP</span>
+
+    <span>
+      Seg–Sex 16h–23h30 •
+      Sáb 8h–12h / 14h–20h30 •
+      Dom 8h–12h
+    </span>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a class="brand" href="index.html">
+      CLUBE DA <span>BOLA</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Navegação principal">
+      <a href="locacao.html">Locação</a>
+      <a href="clube.html">Conheça o Clube</a>
+      <a href="replays.html" aria-current="page">Seu lance no celular</a>
+      <a href="aniversario.html">Aniversários</a>
+      <a href="escolinha.html">Escolinha</a>
+    </nav>
+
+    <a
+      class="navcta"
+      href="https://app.agendeiquadras.com.br/acessar/quadra/sp-jau-clube-da-bola-jau" target="_blank" rel="noopener noreferrer"
+    >
+      ALUGAR QUADRA
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<main>
+<section class="page-hero"><div class="container"><div class="eyebrow">Replay Sports</div><h1>Reviva sua melhor jogada.</h1><p>Aperte a botoeira depois do lance, escolha seu campo e encontre o replay no aplicativo.</p><a class="btn btn-red" href="#replays">VER O PASSO A PASSO →</a></div></section>
+<section class="replay-section" id="replays" aria-labelledby="replay-title">
+  <div class="container">
+    <div class="section-head replay-intro">
+      <div class="eyebrow">Seu lance no celular</div>
+      <h2 id="replay-title">Fez um golaço? Assista ao replay!</h2>
+      <p class="lead">Seu gol, defesa ou jogada especial pode ir direto para o seu celular. Veja como encontrar o lance no aplicativo Replay Sports.</p>
+    </div>
+
+    <div class="replay-steps">
+      <article class="replay-step"><span class="number">01</span><h3>Aperte a botoeira</h3><p>Logo depois da jogada, pressione a botoeira mais próxima do gol onde ela aconteceu.</p></article>
+      <article class="replay-step"><span class="number">02</span><h3>Baixe o aplicativo</h3><p>Instale o Replay Sports no seu celular pela loja de aplicativos.</p></article>
+      <article class="replay-step"><span class="number">03</span><h3>Informe o código</h3><p>Escolha o campo onde aconteceu a jogada e digite o código no aplicativo.</p></article>
+      <article class="replay-step"><span class="number">04</span><h3>Reviva o lance</h3><p>Encontre sua jogada para assistir, baixar e compartilhar.</p></article>
+    </div>
+
+    <div class="replay-fields" aria-label="Códigos dos campos">
+      <div class="replay-field"><div><small>Frente</small><strong>Campo 1</strong><code>7387a</code></div><button type="button" data-replay-code="7387a" aria-label="Copiar código 7387a do Campo 1">Copiar código</button></div>
+      <div class="replay-field"><div><small>Fundo</small><strong>Campo 2</strong><code>7387b</code></div><button type="button" data-replay-code="7387b" aria-label="Copiar código 7387b do Campo 2">Copiar código</button></div>
+    </div>
+    <p class="replay-note" id="replay-copy-status" role="status" aria-live="polite"></p>
+
+    <div class="replay-downloads">
+      <a class="btn btn-red" href="https://play.google.com/store/apps/details?id=br.com.replaysports.app" target="_blank" rel="noopener noreferrer">BAIXAR PARA ANDROID ↗</a>
+      <a class="btn btn-red" href="https://apps.apple.com/br/app/replay-sports/id6450113057" target="_blank" rel="noopener noreferrer">BAIXAR PARA IPHONE ↗</a>
+    </div>
+    <p class="replay-note">Postou seu lance? Marque <a href="https://www.instagram.com/clubedabolajau/" target="_blank" rel="noopener noreferrer">@clubedabolajau</a> para a gente ver também!</p>
+  </div>
+</section>
+<section class="segment-contact"><div class="container"><div><h2>Quer falar com a gente?</h2><p>Estamos em Jaú e podemos ajudar você a escolher a melhor experiência.</p></div><a class="btn btn-red" href="https://wa.me/5514996695565" target="_blank" rel="noopener noreferrer">FALAR NO WHATSAPP →</a></div></section>
+</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+  <div class="container footer-row">
+
+    <div>
+      © 2026 Clube da Bola • Jaú-SP
+    </div>
+
+    <div>
+      Futebol • Escolinha • Aniversários • Sport Bar
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+  document.querySelectorAll('[data-replay-code]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const code = button.getAttribute('data-replay-code');
+      const status = document.getElementById('replay-copy-status');
+      try {
+        await navigator.clipboard.writeText(code);
+        status.textContent = `Código ${code} copiado. Cole no aplicativo Replay Sports.`;
+        button.textContent = 'Copiado ✓';
+        window.setTimeout(() => { button.textContent = 'Copiar código'; }, 2500);
+      } catch {
+        status.textContent = `Não foi possível copiar automaticamente. Digite ${code} no aplicativo Replay Sports.`;
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
